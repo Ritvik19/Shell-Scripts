@@ -1,9 +1,9 @@
-while getopts 'n:f:' c
+while getopts 'c:f:' opt
 do
-  case $c in
-    n) COL=$OPTARG ;;
-    f) FILE_PATH=$OPTARG ;;
-  esac
+    case $opt in
+        c) COL=$OPTARG ;;
+        f) FILE_PATH=$OPTARG ;;
+    esac
 done
 
 cut -d ',' -f $COL $FILE_PATH | head -n 1
