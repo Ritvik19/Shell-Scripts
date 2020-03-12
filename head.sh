@@ -8,4 +8,4 @@ do
 done
 
 N_ROWS=$((N_ROWS+1))
-head -n $N_ROWS $FILE_PATH | tr ',' '\t'
+head -n $N_ROWS $FILE_PATH | column -t -s ','

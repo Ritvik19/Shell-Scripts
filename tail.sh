@@ -6,5 +6,5 @@ do
     esac
 done
 
-head -n 1 $FILE_PATH | tr ',' '\t'
-tail -n $N_ROWS $FILE_PATH | tr ',' '\t'
+head -n 1 $FILE_PATH |  column -t -s ','
+tail -n $N_ROWS $FILE_PATH |  column -t -s ','
